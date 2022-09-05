@@ -1,0 +1,11 @@
+{
+  "env": {
+      "login": {
+          "baseUrl": "http://localhost:53612/Account/Login",
+          "valid_user": {
+              "email": "fabio",
+              "password": "12345678"
+          }
+      }
+  }
+}

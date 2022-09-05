@@ -1,0 +1,22 @@
+{
+  "baseUrl": "https://mail.hostinger.com/",
+  "env": {
+      "login": {
+          "valid_user": {
+              "email": "suporte@qafaixapreta.com.br",
+              "password": "&Su22Preta#"
+          },
+          "invalid_mail": {
+              "email": "qafaixapreta.com.br",
+              "password": "#"
+          },
+          "invalid_password": {
+              "email": "suporte@qafaixapreta.com.br",
+              "password": "#"
+          }
+      },
+      "home": {
+          "url": "TO DO"
+      }
+  }
+}

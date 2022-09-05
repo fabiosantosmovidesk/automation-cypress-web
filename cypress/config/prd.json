@@ -1,0 +1,14 @@
+{
+  "baseUrl": "TO DO",
+  "env": {
+      "login": {
+          "valid_user": {
+              "email": "fabiojfads@hotmail.com",
+              "password": "@Senac510281"
+          }
+      },
+      "home": {
+          "url": "TO DO"
+      }
+  }
+}
