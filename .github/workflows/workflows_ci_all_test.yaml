@@ -11,7 +11,7 @@ jobs:
   install-dependence:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Install modules
       run: npm install
   execution-tests-web:
@@ -20,7 +20,7 @@ jobs:
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: All Test
-        uses: actions/checkout@v2
+        uses: action/chseckout@v3
 
       - name: Run end-to-end tests on desktop 🧪
         uses: cypress-io/github-action@v2
