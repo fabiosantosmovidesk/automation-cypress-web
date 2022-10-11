@@ -1,0 +1,18 @@
+name: workflows_pull_request
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, closed, edited]
+jobs:
+  opened_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_TITLE: PULL REQUEST VALIDATION
+          SLACK_MESSAGE: 'Could you rate the (PULL REQUEST) please!!!'
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_PULL_REQUEST }}
+          SLACK_COLOR: '#ffaa00'
