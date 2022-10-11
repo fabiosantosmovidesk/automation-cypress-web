@@ -28,7 +28,7 @@ jobs:
           CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL }}
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
         with:
-          command: npx cypress run --env configFile=dev
+          command: npx cypress run --env configFile=prd
       - name: Upload Artifact GitHub Action
         run: cd ./cypress/reports/html/
       - uses: actions/upload-artifact@v3
