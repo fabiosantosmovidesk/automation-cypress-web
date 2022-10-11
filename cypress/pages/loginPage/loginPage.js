@@ -1,5 +1,5 @@
 class loginPage {
-  
+
   constructor() {
     this.txb_email = 'input[name="UserName"]'
     this.txb_password = 'input[data-val-required="O campo senha deve ser informado."]'
@@ -20,7 +20,7 @@ class loginPage {
 
   submit() {
     cy.get(this.btn_submit).click()
-    cy.wait(2000)
+    cy.get(this.lbl_my_ticket).should('be.visible')
   }
 
   logout() {

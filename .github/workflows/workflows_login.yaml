@@ -1,4 +1,4 @@
-name: workflows_login
+name: workflows_ci_all_test
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
           CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL }}
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
         with:
-          command: npx cypress run --env configFile=prd
+          command: npx cypress run
       - name: Upload Artifact GitHub Action
         run: cd ./cypress/reports/html/
       - uses: actions/upload-artifact@v3

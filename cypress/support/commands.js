@@ -6,9 +6,9 @@ Cypress.Commands.add('getById', (input) => {
 })
 
 Cypress.Commands.add('messageHaveText', (locator, message) => {
-    cy.get(locator).should('have.text', message)
+  cy.get(locator).should('have.text', message)
 })
-  
+
 Cypress.Commands.add('iframeMessageHaveText', (locatorIframe, locator, message) => {
   cy.getIframeBody(locatorIframe)
     .find(locator)
