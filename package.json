@@ -17,7 +17,6 @@
     "allure:run:dev": "npx cypress run --env configFile=dev,allure=true",
     "allure:run:uat": "npx cypress run --env configFile=uat,allure=true",
     "allure:run:prd": "npx cypress run --env configFile=uat,allure=true"
-    
   },
   "repository": {
     "type": "git",
@@ -35,9 +34,9 @@
     "@testing-library/cypress": "^8.0.3",
     "allure-commandline": "^2.18.1",
     "cpf": "^2.0.1",
-    "cypress": "^10.7.0",
+    "cypress": "^10.9.0",
     "cypress-file-upload": "^5.0.8",
-    "cypress-grep": "^3.0.3",
+    "cypress-grep": "^2.6.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.2.2",
     "cypress-multi-reporters": "^1.6.1",
@@ -45,7 +44,7 @@
     "cypress-xpath": "^2.0.1",
     "eslint": "^8.23.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "mocha-junit-reporter": "^2.0.2"
+    "mocha-junit-reporter": "^2.1.0"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.33.0"
