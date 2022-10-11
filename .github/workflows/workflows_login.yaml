@@ -42,5 +42,5 @@ jobs:
         env:
           SLACK_TITLE: Automation Test WEB
           SLACK_MESSAGE: 'Some tests failed, please review the logs by clicking the link above!'
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_AUT_WEB }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_COLOR: '#FF0000'
