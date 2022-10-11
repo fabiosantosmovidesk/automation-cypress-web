@@ -1,59 +1,59 @@
 import login from '../../pages/loginPage/loginPage'
 import home from '../../components/components'
 
-describe('SISTEMA - Login', {
-  tags: ['@login', '@sistema_login_success'],
-},
+describe('Login', { tags: ['@login', '@login_success'],},
+
   function () {
 
-    beforeEach(() => {
+    this.beforeEach(() => {
       login.go()
     })
 
     afterEach(() => {
     })
 
-    it.only('CT01 - [WEB][SISTEMA][CYPRESS] - Validar mensagem de login correta', {
+    it('CT01 - [WEB][CYPRESS] - Validate login with success', {
       tags: ['@valid_user_correct', '@positive', '@fabio_santos']
     },
 
       function () {
         let valid_user = Cypress.env('login').valid_user
-
         login.form(valid_user)
         login.submit()
-        home.messageHaveText("Meus tickets")
+        cy.elementExists('.buttons-container > .btn-mv-confirm').click()
+        home.messageHaveText(Cypress.env('login').my_ticket)
         cy.screenshot()
         login.logout()
       }
     )
 
-  //   it('CT02 - [WEB][SISTEMA][CYPRESS] - Validar mensagem de login email incorreto', {
-  //     tags: ['@valid_user_email_incorreto', '@negativo', '@fabio_santos']
-  //   },
+    it('CT02 - [WEB][CYPRESS] - Validate login with success metode coupled', {
+      tags: ['@valid_user_correct', '@positive', '@fabio_santos']
+    },
 
-  //     function () {
-  //       let invalid_mail = Cypress.env('login').invalid_mail
+      function () {
+        login.login()
+        cy.screenshot()
+        login.logout()
+      }
+    )
 
-  //       login.form(invalid_mail)
-  //       login.submit()
-  //       home.messageHaveText("Login failed.")
-  //       cy.screenshot()
-  //     }
-  //   )
+    it('CT03 - [WEB][CYPRESS] - Validate login with user incorrect', {
+      tags: ['@valid_user_user_incorrect', '@negative', '@fabio_santos']
+    },
 
-  //   it('CT03 - [WEB][SISTEMA][CYPRESS] - Validar mensagem de login password incorreto', {
-  //     tags: ['@valid_user_password_incorreta', '@negativo', '@fabio_santos']
-  //   },
+      function () {
+        login.login_user_invalid()
+      }
+    )
 
-  //     function () {
-  //       let invalid_password = Cypress.env('login').invalid_password
+    it('CT04 - [WEB][CYPRESS] - Validate login with password incorrect', {
+      tags: ['@valid_user_email_incorrect', '@negative', '@fabio_santos']
+    },
 
-  //       login.form(invalid_password)
-  //       login.submit()
-  //       home.messageHaveText("Login failed.")
-  //       cy.screenshot()
-  //     }
-  //   )
+      function () {
+        login.login_password_invalid()
+      }
+    )
   }
 )

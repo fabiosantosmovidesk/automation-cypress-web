@@ -1,14 +1,24 @@
 {
-  "baseUrl": "TO DO",
-  "env": {
-      "login": {
-          "valid_user": {
-              "email": "fabiojfads@hotmail.com",
-              "password": "@Senac510281"
-          }
-      },
-      "home": {
-          "url": "TO DO"
-      }
-  }
+    "env": {
+        "urls": {
+            "baseUrl": "https://movilabs.movidesk.com/"
+        },
+        "login": {
+            "valid_user": {
+                "user": "automation.agente",
+                "password": "12345678"
+            },
+            "invalid_user": {
+                "user": "automation.agentenotfound",
+                "password": "12345678"
+            },
+            "invalid_password": {
+                "user": "automation.agente",
+                "password": "errorpassord"
+            }
+        },
+        "home": {
+            "url": "TO DO"
+        }
+    }
 }

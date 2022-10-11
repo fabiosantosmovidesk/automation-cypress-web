@@ -1,5 +1,5 @@
 const { defineConfig } = require('cypress')
-
+const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -16,10 +16,12 @@ module.exports = defineConfig({
   e2e: { 
     setupNodeEvents(on, config) {
         const file = config.env.configFile || 'uat'
-      
+
+        allureWriter(on, config);
+
         require('cypress-grep/src/plugin')(config)
         require('cypress-mochawesome-reporter/plugin')(on)
-        return getConfigurationByFile(file)
+        return config, getConfigurationByFile(file)
     },
 
     "viewportWidth": 1366,

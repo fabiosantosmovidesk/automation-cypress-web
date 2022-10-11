@@ -5,9 +5,13 @@
   },
   "mochawesomeReporterOptions": {
     "reportDir": "cypress/reports",
-    "reportPageTitle": "[WEB][SISTEMA][CYPRESS]",
+    "reportPageTitle": "[WEB][CYPRESS]",
     "embeddedScreenshots": true
   },
   "video": false,
-  "screenshotsFolder": "images"
+  "screenshotsFolder": "images",
+
+  "allureResultsPath": "cypress/reports/allure-results",
+  "allureAddVideoOnPass": false,
+  "allure": true
 }

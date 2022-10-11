@@ -1,22 +1,24 @@
 {
-  "baseUrl": "https://mail.hostinger.com/",
-  "env": {
-      "login": {
-          "valid_user": {
-              "email": "suporte@qafaixapreta.com.br",
-              "password": "&Su22Preta#"
-          },
-          "invalid_mail": {
-              "email": "qafaixapreta.com.br",
-              "password": "#"
-          },
-          "invalid_password": {
-              "email": "suporte@qafaixapreta.com.br",
-              "password": "#"
-          }
-      },
-      "home": {
-          "url": "TO DO"
-      }
-  }
+    "env": {
+        "urls": {
+            "baseUrl": "https://visaotecnica.movidesktest.com/"
+        },
+        "login": {
+            "valid_user": {
+                "user": "automation.agente",
+                "password": "12345678"
+            },
+            "invalid_user": {
+                "user": "automation.agentenotfound",
+                "password": "12345678"
+            },
+            "invalid_password": {
+                "user": "automation.agente",
+                "password": "errorpassord"
+            }
+        },
+        "home": {
+            "url": "TO DO"
+        }
+    }
 }

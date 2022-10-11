@@ -13,7 +13,11 @@
     "cy:open:dev": "cypress open --env configFile=dev",
     "cy:test:prd": "cypress run --env configFile=prd",
     "cy:test:uat": "cypress run --env configFile=uat",
-    "cy:test:dev": "cypress run --env configFile=dev"
+    "cy:test:dev": "cypress run --env configFile=dev",
+    "allure:run:dev": "npx cypress run --env configFile=dev,allure=true",
+    "allure:run:uat": "npx cypress run --env configFile=uat,allure=true",
+    "allure:run:prd": "npx cypress run --env configFile=uat,allure=true"
+    
   },
   "repository": {
     "type": "git",
@@ -29,6 +33,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.5.0",
     "@testing-library/cypress": "^8.0.3",
+    "allure-commandline": "^2.18.1",
     "cpf": "^2.0.1",
     "cypress": "^10.7.0",
     "cypress-file-upload": "^5.0.8",
@@ -41,5 +46,8 @@
     "eslint": "^8.23.0",
     "eslint-plugin-cypress": "^2.12.1",
     "mocha-junit-reporter": "^2.0.2"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.33.0"
   }
 }

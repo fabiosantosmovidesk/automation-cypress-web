@@ -1,11 +1,24 @@
 {
-  "env": {
-      "login": {
-          "baseUrl": "http://localhost:53612/Account/Login",
-          "valid_user": {
-              "email": "fabio",
-              "password": "12345678"
-          }
-      }
-  }
+    "env": {
+        "urls": {
+            "baseUrl": "http://localhost:53612/Account/Login"
+        },
+        "login": {
+            "valid_user": {
+                "user": "automation.agente",
+                "password": "12345678"
+            },
+            "invalid_user": {
+                "user": "automation.agentenotfound",
+                "password": "12345678"
+            },
+            "invalid_password": {
+                "user": "automation.agente",
+                "password": "errorpassord"
+            }
+        },
+        "home": {
+            "url": "TO DO"
+        }
+    }
 }

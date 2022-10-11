@@ -2,7 +2,6 @@
 *.png
 .DS_Store
 .idea/
-cypress.env.json
 cypress/integration/examples/
 cypress/integration/videos/
 cypress/mocha-xml
@@ -13,3 +12,5 @@ node_modules/
 reports/
 screenshots/
 temp/
+allure-report/
+allure-results/

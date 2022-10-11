@@ -1,3 +1,4 @@
 import './commands'
-require('cypress-grep')()
+import 'cypress-grep'
 import 'cypress-mochawesome-reporter/register'
+import '@shelex/cypress-allure-plugin'

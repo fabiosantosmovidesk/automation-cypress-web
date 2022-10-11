@@ -87,4 +87,18 @@ Cypress.Commands.add('getIframeBody2', (a, b) => {
     // https://on.cypress.io/wrap
     .then(cy.wrap)
 })
-  
+
+Cypress.Commands.add('elementExists', (selector) => {
+  cy.get('body').then(($body) => {
+    if ($body.find(selector).length) {
+      return cy.get(selector)
+    } else {
+      // Throws no error when element not found
+      assert.isOk('OK', 'Element does not exist.')
+    }
+  })
+})
+
+Cypress.Commands.add('messageHaveText', (messenger) => {
+  cy.contains(messenger)
+})
